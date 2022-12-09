@@ -32,9 +32,9 @@ public sealed abstract class Segment permits Line, Curve, Loop {
 final class Line extends Segment {
     Align alignment;
 
-    public Line(){
-        points.add(new Point());
-        points.add(new Point());
+    public Line() {
+        points.add(new Point(this));
+        points.add(new Point(this));
     }
 
     @Override
