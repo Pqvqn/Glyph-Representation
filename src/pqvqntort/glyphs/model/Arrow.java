@@ -1,6 +1,6 @@
 package pqvqntort.glyphs.model;
 
-public sealed interface Arrow permits Align, Radial, Fill {}
+public sealed interface Arrow permits Align, Radial, Fill, Place {}
 
 enum Align implements Arrow {
     VERTICAL,
@@ -20,4 +20,13 @@ enum Radial implements Arrow {
 }
 enum Fill implements Arrow {
     DOT, RING;
+}
+
+enum Place implements Arrow {
+    RIGHT,
+    DOWN,
+    DOWN_RIGHT,
+    DOWN_LEFT,
+    INSIDE,
+    COVER
 }
